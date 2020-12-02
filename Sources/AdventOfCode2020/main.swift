@@ -8,5 +8,12 @@ func record(_ closure: @autoclosure () -> ()) {
 	print("Time elapsed: \(duration)")
 }
 
-record(Day01_01().solve())
-record(Day01_02.solve())
+//record(Day01_01().solve())
+//record(Day01_02.solve())
+
+if #available(OSX 10.15, *) {
+	record(Day02_01().solve())
+	record(Day02_02().solve())
+} else {
+	// Fallback on earlier versions
+}
