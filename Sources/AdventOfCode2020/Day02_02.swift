@@ -1031,6 +1031,7 @@ struct Day02_02 {
 
 	func validate(entry: Entry) -> Bool {
 		var matches: [Bool] = []
+		
 		if let range1 = entry.password.index(entry.password.startIndex, offsetBy: entry.firstIndex - 1, limitedBy: entry.password.endIndex) {
 			matches.append(entry.password[range1] == entry.substring)
 		}
