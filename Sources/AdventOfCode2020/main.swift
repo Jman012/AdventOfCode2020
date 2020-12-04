@@ -18,5 +18,8 @@ if #available(OSX 10.15, *) {
 	// Fallback on earlier versions
 }
 
-record(Day03_01().solve())
-record(Day03_01().solvePart2())
+//record(Day03_01().solve())
+//record(Day03_01().solvePart2())
+
+record(Day04_01().solvePart1())
+record(Day04_01().solvePart2())
