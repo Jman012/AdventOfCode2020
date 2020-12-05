@@ -790,13 +790,16 @@ FFBBBFBRLL
 		return input.split(separator: "\n").map(String.init).map(parseBoardingPass)
 	}
 
-	func parseBoardingPass(input: String) -> Seat {
-		let frontBack = input.dropLast(3)
-		let leftRight = input.dropFirst(7)
-		let rowBinary = frontBack.replacingOccurrences(of: "F", with: "0").replacingOccurrences(of: "B", with: "1")
-		let colBinary = leftRight.replacingOccurrences(of: "L", with: "0").replacingOccurrences(of: "R", with: "1")
-		return Seat(row: Int(rowBinary, radix: 2)!, col: Int(colBinary, radix: 2)!)
-	}
+func parseBoardingPass(input: String) -> Seat {
+	let binary = String(input.map { s -> Character in
+		switch s {
+		case "F", "L": return "0"
+		case "B", "R": return "1"
+		default: return " "
+		}
+	})
+	return Seat(row: Int(binary.dropLast(3), radix: 2)!, col: Int(binary.dropFirst(7), radix: 2)!)
+}
 
 	func largestSeatNumber(seats: [Seat]) -> Int {
 		return seats.map{ $0.seatNumber }.max()!
