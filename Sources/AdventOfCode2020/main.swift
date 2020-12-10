@@ -36,5 +36,8 @@ if #available(OSX 10.15, *) {
 //record(Day08_01().solvePart1())
 //record(Day08_01().solvePart2())
 
-record(Day09_01().solvePart1())
-record(Day09_01().solvePart2())
+//record(Day09_01().solvePart1())
+//record(Day09_01().solvePart2())
+
+record(Day10_01().solvePart1())
+record(Day10_01().solvePart2())
