@@ -44,11 +44,17 @@ if #available(OSX 10.15, *) {
 
 //print("Day 11:")
 //print("\nOriginal:")
-//record(Day11_01().solvePart1())
-//record(Day11_01().solvePart2())
+////record(Day11_01().solvePart1())
+////record(Day11_01().solvePart2())
 //print("\nRevised:")
 //record(Day11_Revision().solvePart1())
 //record(Day11_Revision().solvePart2())
+//print("\nRevised 2:")
+//record(Day11_Revision2().solvePart1())
+//record(Day11_Revision2().solvePart2())
 
-record(Day12_01().solvePart1())
-record(Day12_01().solvePart2())
+//record(Day12_01().solvePart1())
+//record(Day12_01().solvePart2())
+
+record(Day13_01().solvePart1())
+record(Day13_01().solvePart2())
