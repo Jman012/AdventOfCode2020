@@ -23,7 +23,7 @@ struct Day15_01 {
 			}
 
 			memory[lastNumber] = (turn, memory[lastNumber] == nil ? nil : memory[lastNumber]!.0)
-			print("\(lastNumber): \(memory[lastNumber]!)")
+//			print("\(lastNumber): \(memory[lastNumber]!)")
 		}
 
 		return lastNumber
