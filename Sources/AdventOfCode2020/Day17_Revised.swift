@@ -129,7 +129,7 @@ struct Day17_Revised {
 	}
 
 	func solvePart2() {
-		let dim = parse(input: Inputs.day17Input, dimensions: 4)
+		let dim = parse(input: Inputs.day17Input, dimensions: 5)
 		let offsets = dim.getNeighborCoordOffsets()
 		for _ in 0..<6 {
 			process(dim: dim, offsets: offsets)
