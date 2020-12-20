@@ -64,7 +64,7 @@ struct Day19_02 {
 		for datum in data {
 			let match = matches(input: Array<Character>(datum)[...], rules: rules)
 			if match.contains(where: { $0.isEmpty }) {
-				print(datum)
+//				print(datum)
 				count += 1
 			}
 		}

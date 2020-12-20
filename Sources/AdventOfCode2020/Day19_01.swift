@@ -95,9 +95,9 @@ struct Day19_01 {
 			let (match, input) = matches(input: Array<Character>(datum)[...], rules: rules)
 			if match {
 				if input.isEmpty {
-					print("datum: \(datum); leftovers: \(input)")
+//					print("datum: \(datum); leftovers: \(input)")
 				} else {
-					print("matches: \(datum)")
+//					print("matches: \(datum)")
 					count += 1
 				}
 			}
