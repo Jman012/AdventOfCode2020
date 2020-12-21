@@ -79,5 +79,8 @@ if #available(OSX 10.15, *) {
 //record(Day19_01().solvePart1())
 //record(Day19_02().solvePart2())
 
-record(Day20_01().solvePart1())
-record(Day20_01().solvePart2())
+//record(Day20_01().solvePart1())
+//record(Day20_01().solvePart2())
+
+record(Day21_01().solvePart1())
+record(Day21_01().solvePart2())
