@@ -13012,5 +13012,61 @@ ngqh lxr qrftr nldzpc cbbkfx zdntns xxfgvz srgnx qspfqb zfsks tzjnvp tphtz qrscz
 xlzqfb vpgvm flhfddq kbtx zmcj jmdg vhqfz tphtz vqrjn stcsp ckqq rgdx nfnzx nggcjr qrsczjv xmjlsn pgb ngqh pjqdmpm qsgb nldzpc hkxcb klmjmz rpmmv xjrpr zlgztsbd ncqdr zmb rpcdfph qjsbk gzgvdh xnfhq hlmvqh cbbkfx knnmm qfkjsq xddkbd vgp pmtfmv qdpbx cnghsg hrfmdk fjgxv xlnn xjzc mszc ljmvpp zntrfp fdf pcf mnvq thvm bkd fbcds dbx fstgc dln pfqxsxd zrgzf mhrm pbn zttx zhghprj (contains peanuts, eggs, dairy)
 nldzpc gmc mjpt knqzf rbvdt zntrfp nthhxn jmdg rxr xzcdnr kx ljmvpp kltcm jmgt gjqfj pgqxp xjrpr zmb qrsczjv hlmvqh dbx dmxhhd pnglkx gsgmdn vhcnpg zrgzf xjzc pjqdmpm rpcdfph lbfgp xgbvk jvvmcq qdpbx nqfc dvcfx thvm rknm kbtx npbnj mrxg klmjmz rrbndl xbpb ncqdr fdf vpvj kglr pptgt mrfxh (contains sesame)
 tshn dmxhhd qmthj kqzcj rqqfnlc pcf dgrrm hkqp ckqq flhfddq qmmt thcs vqrjn vht tbm lqmfgp bcvmz fbcds jmdg rbvdt xzcdnr xlzqfb vfkpj mrfxh sdccxkt fstgc fhtsl qfvfzg kmsh dznd zrgzf bxv glrc thvm pmtfmv rkzhxmh zqsc xjzc fmvvb ddbmq qspfqb tjsdp rcvd xgbvk gzgvdh cmnb pptgt ngqh xlnn sjgx mrxg qdpbx rknm hnmjfl szsbj zntrfp gtgrcf fdf kltcm vhcnpg zmb pjln mppf dnpgcd ttxx qrsczjv srgnx qszmzsh (contains shellfish, nuts)
-""") 
+""")
+
+	static let day22Input = ("""
+Player 1:
+14
+23
+6
+16
+46
+24
+13
+25
+17
+4
+31
+7
+1
+47
+15
+9
+50
+3
+30
+37
+43
+10
+28
+33
+32
+
+Player 2:
+29
+49
+11
+42
+35
+18
+39
+40
+36
+19
+48
+22
+2
+20
+26
+8
+12
+44
+45
+21
+38
+41
+34
+5
+27
+""")
 }
