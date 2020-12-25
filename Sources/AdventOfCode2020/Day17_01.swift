@@ -268,7 +268,7 @@ struct Day17_02 {
 
 extension ClosedRange {
 	func expandingTo(value: Bound) -> Self {
-		return (min(self.lowerBound, value))...(max(value, self.upperBound))
+		return (Swift.min(self.lowerBound, value))...(Swift.max(value, self.upperBound))
 	}
 }
 

@@ -45,19 +45,6 @@ struct Day23_01 {
 		let finalNums = final[indexOf1...] + final[0..<indexOf1]
 		print(finalNums.map({String($0)}).joined())
 	}
-
-	func solvePart2() {
-		var nums = parse(input: Inputs.day23Input)
-		for n in nums.max()!...1_000_000 {
-			nums.append(n)
-		}
-		let final = playCrabGame(nums: nums, rounds: 10_000_000)
-		let indexOf1 = final.firstIndex(of: 1)!
-		let finalNums = nums[indexOf1...] + nums[0..<indexOf1]
-		print(finalNums[0..<3])
-		print(UInt64(finalNums[1]) * UInt64(finalNums[2]))
-//		print(finalNums.map({String($0)}).joined())
-	}
 }
 
 
@@ -72,17 +59,17 @@ struct Day23_01Revised {
 		}
 	}
 
-	func parse(input: String) -> [Int] {
-		return input.map({ Int(String($0))! })
+	func parse(input: String) -> [Int32] {
+		return input.map({ Int32(String($0))! })
 	}
 
-	func playCrabGame(nums initialNums: [Int], rounds: Int) -> [Int] {
-		var tail = Node<Int>(initialNums.last!, nil)
+	func playCrabGame(nums initialNums: [Int32], rounds: Int32) -> [Int32] {
+		var tail = Node<Int32>(initialNums.last!, nil)
 		var nums = initialNums.reversed().dropFirst().reduce(tail, {
-			return Node<Int>($1, $0)
+			return Node<Int32>($1, $0)
 		})
-		var nodeMap: [Int: Node<Int>] = [:]
-		var currNodeMapNode: Node<Int>? = nums
+		var nodeMap: [Int32: Node<Int32>] = [:]
+		var currNodeMapNode: Node<Int32>? = nums
 		while currNodeMapNode != nil {
 			nodeMap[currNodeMapNode!.value] = currNodeMapNode!
 			currNodeMapNode = currNodeMapNode!.next
@@ -92,7 +79,7 @@ struct Day23_01Revised {
 		for i in 0..<rounds {
 //			if i%1000 == 0 { print("round \(i) (\(100.0 * Double(i) / Double(rounds)))") }
 			// Get the [1...3] values
-			let three: Set<Int> = [nums.next!.value, nums.next!.next!.value, nums.next!.next!.next!.value]
+			let three: Set<Int32> = [nums.next!.value, nums.next!.next!.value, nums.next!.next!.next!.value]
 			var nextNum = nums.value-1
 			while nextNum == 0 || Array(three).contains(nextNum) {
 				nextNum -= 1
@@ -102,7 +89,7 @@ struct Day23_01Revised {
 			}
 
 			// Find nums[4] node
-			var chunkToIndexOfNextNum = nums.next!.next!.next!.next!
+			let chunkToIndexOfNextNum = nums.next!.next!.next!.next!
 			// Find nums[nums.firstIndex(of: nextNum)!] node
 			var currentNode = nodeMap[nextNum]!
 			// Temporarily store nums[nums.firstIndex(of: nextNum)!+1...] nodes
@@ -126,31 +113,13 @@ struct Day23_01Revised {
 			tail = nums
 			// Mark the new head of the list
 			nums = chunkToIndexOfNextNum
-
-
-//			let indexOfNextNum = nums.firstIndex(of: nextNum)!
-//			nums = nums[4...indexOfNextNum] + three + nums[(indexOfNextNum+1)...] + [nums.first!]
 		}
 
-//		var result: [Int] = []
-//		var curr: Node<Int>? = nums
-//		while curr != nil {
-//			result.append(curr!.value)
-//			curr = curr!.next
-//		}
 		let a = [nodeMap[1]!.next!.value, nodeMap[1]!.next!.next!.value]
-//		for node in nodeMap {
-//			node.value.next = nil
-//		}
+		for node in nodeMap {
+			node.value.next = nil
+		}
 		return a
-	}
-
-	func solvePart1() {
-//		let nums = parse(input: Inputs.day23Input)
-//		let final = playCrabGame(nums: nums, rounds: 100)
-//		let indexOf1 = final.firstIndex(of: 1)!
-//		let finalNums = final[indexOf1...] + final[0..<indexOf1]
-//		print(finalNums.map({String($0)}).joined())
 	}
 
 	func solvePart2() {
